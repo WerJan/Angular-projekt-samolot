@@ -1,0 +1,52 @@
+
+<body>
+<button (click)="pokazDate()" title="pokaz dzialanie" id="pokazDate1">POKAŻ DATĘ</button><br>
+
+<!-- Dzisiejsza data to : {{ Date1}} <br> -->
+
+<h1>Dzisiejsza data to : {{DzisiejszyDzien()}}.{{DzisiejszyMiesiac()}}.{{DzisiejszyRok()}}</h1>
+
+
+<br>
+<div class="container">
+  
+    <div class="box">Miejsce wylotu:</div>
+    <select name="cities" id="cities">
+      <option value="empty"> </option>
+      <option value="katowice">KATOWICE</option>
+    </select> 
+
+    <div class="box">Liczba biletów: </div>
+    <select name="tickets" id="tickets">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select> 
+  
+  <div class="col">
+    <!-- weather widget start --><a target="_blank" href="https://www.booked.net/weather/katowice-10805"><img src="https://w.bookcdn.com/weather/picture/11_10805_1_1_f10032_118_f10032_ffffff_ffffff_0_f10032_ffffff_0_6.png?scode=124&domid=w209&anc_id=11997"  alt="booked.net"/></a><!-- weather widget end -->
+</div>
+</div>
+
+
+<h2 class="p-field p-col-12 p-md-4">
+    <label for="time">Czas i godzina wylotu:    </label> 
+    <p-calendar [(ngModel)]="date7" [showTime]="true" inputId="time"></p-calendar>
+</h2> 
+<br>
+
+<button (click)="idzdo()">SZUKAJ</button>
+<br>
+<a class="weatherwidget-io" href="https://forecast7.com/en/51d7619d46/lodz/" data-label_1="ŁÓDŹ" data-label_2="WEATHER" data-theme="original" >ŁÓDŹ WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+<!-- <weather src="https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid={261e92790ed1d427f12bc51581a88f75}">POGODa</weather> -->
+</body>

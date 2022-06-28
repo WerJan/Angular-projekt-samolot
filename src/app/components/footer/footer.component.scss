@@ -1,0 +1,17 @@
+.footer{
+    
+}
+
+.active{
+ 
+    display: none;
+  }
+  
+  .not-active{
+    border : 1px solid black;
+    padding : 1rem;
+    cursor: pointer;
+    position: fixed;
+    bottom: 0;
+    height: 5%;
+  }
